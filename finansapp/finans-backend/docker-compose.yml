@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  go-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT:-8080}:8080"
+    env_file:
+      - .env
+    depends_on:
+      - python-service
+    restart: unless-stopped
+
+  python-service:
+    build:
+      context: ./python
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
+    volumes:
+      - ./python/data:/app/data
+    restart: unless-stopped

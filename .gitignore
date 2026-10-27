@@ -1,0 +1,26 @@
+# Model dosyaları ve ağırlıklar (GitHub sınırını aşar)
+*.gguf
+*.safetensors
+*.pt
+*.bin
+*.pth
+ollama-model/
+finetuned-qwen/
+llama.cpp/
+
+# Gizli bilgiler
+.env
+.env.*
+apikey.txt
+
+# Ortam ve derleme çıktıları
+node_modules/
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+.expo/
+.claude/
+*.exe
+*.log
+

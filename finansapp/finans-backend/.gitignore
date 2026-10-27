@@ -1,0 +1,45 @@
+# Ortam ve gizli dosyalar
+.env
+*.env.*
+!.env.example
+
+# API anahtarları — kesinlikle commit edilemez
+apikey.txt
+*.key
+*.pem
+secrets/
+
+# Go build çıktıları
+finans-backend
+finans-backend.exe
+*.exe
+*.test
+*.out
+/bin/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Veri dosyaları
+python/data/raw_macro.json
+python/data/latest.json
+python/data/clean_macro.json
+
+# Editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
